@@ -27,4 +27,22 @@ function currentLine(katzDeliLine) {
     }
 }
 
-var lastPerson = 
+var lastPerson = 0 
+
+var numberLine = []
+
+function takeANumber2() {
+  lastPerson = lastPerson + 1;
+  numberLine.push(lastPerson);
+  return `Welcome, you are number ${lastPerson}.`;
+}
+
+function nowServing2() {
+  if (numberLine.length > 0) {
+    var firstperson = numberLine[0];
+    numberLine.shift();
+    return `Currently serving ${firstperson}.`;
+  } else {
+    return "There is nobody waiting to be served!"
+  }
+}
